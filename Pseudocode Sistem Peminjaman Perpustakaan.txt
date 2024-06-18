@@ -1,6 +1,6 @@
-:::: PSEUDOCODE SISTEM PEMINJAMAN PERPUSTAKAAN ::::
+# PSEUDOCODE SISTEM PEMINJAMAN PERPUSTAKAAN
 
-|| Versi Sederhananya ||
+### Versi Sederhananya
 
 Memulai Program;
 
