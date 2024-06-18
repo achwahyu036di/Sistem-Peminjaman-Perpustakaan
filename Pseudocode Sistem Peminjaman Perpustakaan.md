@@ -1,47 +1,72 @@
-# :::: PSEUDOCODE SISTEM PEMINJAMAN PERPUSTAKAAN ::::
+# PSEUDOCODE SISTEM PEMINJAMAN PERPUSTAKAAN
 
-### || Versi Sederhananya ||
+### 1.1 Versi Sederhananya
 
 Memulai Program;
 
 Deklarasi;
+```cpp
 Struct Buku // Menyimpan informasi buku seperti Judul, Pengarang dan Status Peminjaman.
 Array daftarBuku // Menyimpan daftar buku yang ada di perpustakaan.
-
+```
 Menambahkan Fungsi;
+```cpp
 Fungsi tambahBuku // Menambahkan buku baru ke daftar buku.
+```
+```cpp
 Fungsi cariBukuJudul // Mencari buku berdasarkan judul bukunya.
+```
+```cpp
 Fungsi cariBukuPengarang // Mencari buku berdasarkan nama pengarangnya.
+```
+```cpp
 Fungsi pinjamBuku // Mengelola peminjaman buku.
+```
+```cpp
 Fungsi kembalikanBuku // Mengelola pengembalian buku.
+```
+```cpp
 Fungsi editBuku // Mengedit informasi buku yang sudah ada di daftar buku.
+```
+```cpp
 Fungsi tampilkanDaftarBuku // Menampilkan seluruh daftar buku bersama dengan statusPeminjamannya.
+```
+```cpp
 Fungsi simpanKeFile // Menyimpan data buku ke dalam bentuk file.
+```
+```cpp
 Fungsi muatDariFile // Memuat data buku yang sudah dalam bentuk file.
+```
+```cpp
 Fungsi main // Menu utama program yang mengatur alur program berdasarkan input yang dipilih oleh pengguna.
+```
 
 Mengakhiri Program;
 
 
-|| :::::::::::::::::::::::::::::::::::::::::::::::::::::::: ||
+# 
 
 
-|| Versi Lebih Kompleks ||
+
+### 1.2 Versi Lebih Kompleks
 
 Memulai Program;
 
 Deklarasi struct Buku; // menyimpan informasi buku.
+```cpp
     struct Buku {
         string judul;
         string pengarang;
         bool dipinjam;
     };
-
+```
 Deklarasi array dinamis;  // menyimpan daftar buku.
+```cpp
     Buku daftarBuku[100];
     int jumlahBuku = 0;
-
+```
 Fungsi menambahkan buku baru;
+```cpp
     function tambahBuku(string judul, string pengarang) {
         Buku bukuBaru;
         bukuBaru.judul = judul;
@@ -52,8 +77,9 @@ Fungsi menambahkan buku baru;
         jumlahBuku++;
         cout << "Buku berhasil ditambahkan.";
     }
-
+```
 Fungsi mencari buku berdasarkan judul;
+```cpp
     function cariBukuJudul(string judul) {
         for (int i = 0; i < jumlahBuku; i++) {
             if (daftarBuku[i].judul == judul) {
@@ -62,8 +88,9 @@ Fungsi mencari buku berdasarkan judul;
         }
         return -1; // Buku tidak ditemukan.
     }
-
+```
 Fungsi mencari buku berdasarkan pengarang;
+```cpp
     function cariBukuPengarang(string pengarang) {
         for (int i = 0; i < jumlahBuku; i++) {
             if (daftarBuku[i].pengarang == pengarang) {
@@ -72,8 +99,9 @@ Fungsi mencari buku berdasarkan pengarang;
         }
         return -1; // Buku tidak ditemukan.
     }
-
+```
 Fungsi meminjam buku;
+```cpp
     function pinjamBuku(string judul) {
         int indeks = cariBukuJudul(judul);
         if (indeks != -1 && !daftarBuku[indeks].dipinjam) {
@@ -83,8 +111,9 @@ Fungsi meminjam buku;
             cout << "Buku tidak ditemukan atau sudah dipinjam.";
         }
     }
-
+```
 Fungsi mengembalikan buku;
+```cpp
     function kembalikanBuku(string judul) {
         int indeks = cariBukuJudul(judul);
         if (indeks != -1 && daftarBuku[indeks].dipinjam) {
@@ -94,8 +123,9 @@ Fungsi mengembalikan buku;
             cout << "Buku tidak ditemukan atau belum dipinjam.";
         }
     }
-
+```
 Fungsi mengedit buku;
+```cpp
     function editBuku(string judul, string judulBaru, string pengarangBaru) {
         int indeks = cariBukuJudul(judul);
         if (indeks != -1) {
@@ -106,8 +136,9 @@ Fungsi mengedit buku;
             cout << "Buku tidak ditemukan.";
         }
     }
-
+```
 Fungsi menampilkan daftar buku;
+```cpp
     function tampilkanDaftarBuku() {
         for (int i = 0; i < jumlahBuku; i++) {
             cout << "Judul: " << daftarBuku[i].judul << ", Pengarang: " << daftarBuku[i].pengarang;
@@ -117,8 +148,9 @@ Fungsi menampilkan daftar buku;
             cout << endl;
         }
     }
-
+```
 Fungsi menyimpan data buku ke dalam file;
+```cpp
     function simpanKeFile(string namaFile) {
         ofstream file(namaFile);
         for (int i = 0; i < jumlahBuku; i++) {
@@ -126,8 +158,9 @@ Fungsi menyimpan data buku ke dalam file;
         }
         file.close();
     }
-
+```
 Fungsi memuat data buku yang sudah dalam bentuk file;
+```cpp
     function muatDariFile(string namaFile) {
         ifstream file(namaFile);
         string line;
@@ -143,8 +176,9 @@ Fungsi memuat data buku yang sudah dalam bentuk file;
         }
         file.close();
     }
-
+```
 Fungsi utama untuk mengelola menu dan alur program;
+```cpp
     function main() {
         muatDariFile("data_buku.txt");
         
@@ -226,5 +260,5 @@ Fungsi utama untuk mengelola menu dan alur program;
             }
         }
     }
-
+```
 Mengakhiri Program;
