@@ -6,7 +6,7 @@ Tampilan-Output yang Diminta
 -----------------------------------------------------------------------------
 
 Silahkan Anda bisa memilih beberapa pilihan layanan berikut ini :
-[1] Menambahkan buku baru
+[1] Menambahkan Buku Baru
 [2] Mencari Buku
 [3] Mengedit Informasi Buku
 [4] Meminjam Buku
