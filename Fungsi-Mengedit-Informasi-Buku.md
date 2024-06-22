@@ -1,4 +1,4 @@
-# FUNGSI MENCARI BUKU
+# FUNGSI MENGEDIT INFORMASI BUKU
 
 Jadi tugas Anda adalah membuat fungsi editBuku!
 
