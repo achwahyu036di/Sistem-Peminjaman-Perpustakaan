@@ -3,7 +3,7 @@
 Jadi, Tugas untuk Wahyu adalah membuat fungsi tambahBuku!
 ```
 Fungsi ini pakai class dan bukan struct.
-Ini contoh sederhana membuat fungsi menambahkan buku baru.
+Untuk sementara gw masih bingung.
 
 ```
 
