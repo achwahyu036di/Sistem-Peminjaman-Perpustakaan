@@ -12,7 +12,7 @@ private:
     bool statusBuku;
 public:
     Buku () {}
-    Buku (string judul, string pengarang, int tahun, int stok, bool status) {
+    Buku (string judul[100], string pengarang[20], int tahun[4], int stok[3], bool status) {
         judulBuku = judul;
         pengarangBuku = pengarang;
         tahunTerbit = tahun;
@@ -56,6 +56,9 @@ int main () {
 
     switch(n) {
         case 1 : {
+            cout << "Menu Menambahkan Buku\n";
+            cout << "Judul Buku : ";
+            cin >> 
             
         }
         case 2 : {
