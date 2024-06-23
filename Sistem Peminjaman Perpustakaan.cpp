@@ -2,38 +2,26 @@
 #include <fstream>
 #include <stdlib.h>
 #include <conio.h>
+#include <vector>
 
 using namespace std;
 
 class Buku {
-private:
-    string judulBuku, pengarangBuku;
-    int tahunTerbit, stokBuku;
-    bool statusBuku;
-public:
-    Buku () {}
-    Buku (string judul, string pengarang, int tahun, int stok, bool status) {
-        judulBuku = judul;
-        pengarangBuku = pengarang;
-        tahunTerbit = tahun;
-        stokBuku = stok;
-        statusBuku = status;
-    }
-}
+    public:
+        string judul;
+        string pengarang;
+        int idbuku;
+        int tahunterbit;
+        int stokbuku;
+        bool statusbuku;
+};
 
 class Peminjam {
-private:
-    string namaPeminjam, alamatPeminjam, nomorTelponPeminjam;
-public:
-    Peminjam () {}
-    Peminjam (string nama, string alamat, string nomor) {
-        namaPeminjam = nama;
-        alamatPeminjam = alamat;
-        nomorTeleponPeminjam = nomor;
-    }
-}
-
-Buku daftarBuku[100];
+    public:
+        string namapeminjam;
+        string asaldaerahpeminjam;
+        int idpeminjam;
+};
 
 int n;
 
@@ -52,32 +40,61 @@ int main () {
     cout << "\n";
     
     cout << "Silahkan tentukan pilihan Anda [1] - [7]\n";
-    cin >> n ;
+    cin >> n;
 
-    switch(n) {
-        case 1 : {
-            
-        }
-        case 2 : {
+    if (n == 1) {
+        Buku buku;
+        cout << "Masukkan Judul Buku\t :";
+        cin >> buku.judul;
 
-        }
-        case 3 : {
+        cout << "Masukkan Nama Pengarang\t :";
+        cin >> buku.pengarang;
 
-        }
-        case 4 : {
+        cout << "Masukkan Tahun Terbit\t :";
+        cin >> buku.tahunterbit;
 
-        }
-        case 5 : {
-
-        }
-        case 6 : {
-
-        }
-        case 7 : {
-
-        }
+        cout << "Masukkan Stok Buku\t :";
+        cin >> buku.stokbuku;
     }
+}
+//     switch(n) {
+//         case 1 : {
+//             Buku buku;
+//             cout << "Masukkan Judul Buku\t :\n";
+//             cin >> buku.judul;
+
+//             cout << "Masukkan Nama Pengarang\t :\n";
+//             cin >> buku.pengarang;
+
+//             cout << "Masukkan Tahun Terbit\t :\n";
+//             cin >> buku.tahunterbit;
+
+//             cout << "Masukkan Stok Buku\t :\n";
+//             cin >> buku.stokbuku;
+
+//             break;
+            
+//         case 2 : {
+
+//         }
+//         case 3 : {
+
+//         }
+//         case 4 : {
+
+//         }
+//         case 5 : {
+
+//         }
+//         case 6 : {
+
+//         }
+//         case 7 : {
+
+//         }
+//     }
 
     
-    return 0;
-}
+//     return 0;
+
+// }
