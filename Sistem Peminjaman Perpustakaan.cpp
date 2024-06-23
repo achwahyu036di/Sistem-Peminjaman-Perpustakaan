@@ -8,19 +8,19 @@ using namespace std;
 
 class Buku {
     public:
-        string judul;
-        string pengarang;
-        int idbuku;
-        int tahunterbit;
-        int stokbuku;
-        bool statusbuku;
+        string judulBuku;
+        string pengarangBuku;
+        int idBuku;
+        int tahunTerbit;
+        int stokBuku;
+        bool statusBuku;
 };
 
 class Peminjam {
     public:
-        string namapeminjam;
-        string asaldaerahpeminjam;
-        int idpeminjam;
+        string namaPeminjam;
+        string asaldaerahPeminjam;
+        int idPeminjam;
 };
 
 int n;
@@ -44,35 +44,23 @@ int main () {
 
     if (n == 1) {
         Buku buku;
-        cout << "Masukkan Judul Buku\t :";
-        cin >> buku.judul;
+        cout << "Masukkan ID Buku\t : ";
+        cin >> buku.kodeBuku;
+        
+        cout << "Masukkan Judul Buku\t : ";
+        cin >> buku.judulBuku;
 
-        cout << "Masukkan Nama Pengarang\t :";
-        cin >> buku.pengarang;
+        cout << "Masukkan Nama Pengarang\t : ";
+        cin >> buku.pengarangBuku;
 
-        cout << "Masukkan Tahun Terbit\t :";
-        cin >> buku.tahunterbit;
+        cout << "Masukkan Tahun Terbit\t : ";
+        cin >> buku.tahunTerbit;
 
-        cout << "Masukkan Stok Buku\t :";
-        cin >> buku.stokbuku;
+        cout << "Masukkan Stok Buku\t : ";
+        cin >> buku.stokBuku;
     }
 }
-//     switch(n) {
-//         case 1 : {
-//             Buku buku;
-//             cout << "Masukkan Judul Buku\t :\n";
-//             cin >> buku.judul;
-
-//             cout << "Masukkan Nama Pengarang\t :\n";
-//             cin >> buku.pengarang;
-
-//             cout << "Masukkan Tahun Terbit\t :\n";
-//             cin >> buku.tahunterbit;
-
-//             cout << "Masukkan Stok Buku\t :\n";
-//             cin >> buku.stokbuku;
-
-//             break;
+//   
             
 //         case 2 : {
 
