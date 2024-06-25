@@ -63,8 +63,7 @@ int main () {
             cin.ignore();
             getline(cin, dataBuku[a].idBuku);
             cout << "Masukkan Judul Buku Baru\t : \n";
-            cin.ignore();
-            getline(cin, dataBuku[a].judulBuku);
+            cin >> dataBuku[a].judulBuku;
             cout << "Masukkan Nama Pengarang Buku\t : \n";
             cin >> dataBuku[a].pengarangBuku; 
             cout << "Masukkan Tahun Buku\t \n";
