@@ -8,11 +8,12 @@ using namespace std;
 
 class Buku {
     public:
-        string judulBuku;
+        string judulBuku; 
         string pengarangBuku;
-        int idBuku;
-        int tahunTerbit;
-        int stokBuku;
+        string idBuku;
+        int no;
+        int tahunTerbit; 
+        int stokBuku; 
         bool statusBuku;
 };
 
@@ -20,10 +21,11 @@ class Peminjam {
     public:
         string namaPeminjam;
         string asaldaerahPeminjam;
-        int idPeminjam;
+        string nomorTeleponPeminjam;
 };
 
-int n;
+int n;        
+int banyakData; 
 
 int main () {
     cout << ":::::::::::::::: SELAMAT DATANG DI PERPUSTAKAAN PUTRA BANGSA ::::::::::::::::\n";
@@ -40,26 +42,39 @@ int main () {
     cout << "\n";
     
     cout << "Silahkan tentukan pilihan Anda [1] - [7]\n";
-    cin >> n;
-
+    cin >> n ;
+    
+    
     if (n == 1) {
-        Buku buku;
-        cout << "Masukkan ID Buku\t : ";
-        cin >> buku.kodeBuku;
+        int namBuku;
+        cout << ":::::::: Menambahkan Buku Baru ::::::::\n";
+        cout << "---------------------------------------\n";
         
-        cout << "Masukkan Judul Buku\t : ";
-        cin >> buku.judulBuku;
-
-        cout << "Masukkan Nama Pengarang\t : ";
-        cin >> buku.pengarangBuku;
-
-        cout << "Masukkan Tahun Terbit\t : ";
-        cin >> buku.tahunTerbit;
-
-        cout << "Masukkan Stok Buku\t : ";
-        cin >> buku.stokBuku;
+        cout << "Jumlah Buku Ditambahkan\t : ";
+        cin >> banyakData;
+        
+        vector <Buku> dataBuku (banyakData);
+        for (int a = 0; a < banyakData; ++a) {
+            cout << "Data Buku Ke-" << a + 1 << ":\n";
+            dataBuku[a].no = a + 1; 
+        
+            Buku buku;
+            cout << "Masukkan ID Buku\t : \n";
+            cin.ignore();
+            getline(cin, dataBuku[a].idBuku);
+            cout << "Masukkan Judul Buku Baru\t : \n";
+            cin.ignore();
+            getline(cin, dataBuku[a].judulBuku);
+            cout << "Masukkan Nama Pengarang Buku\t : \n";
+            cin >> dataBuku[a].pengarangBuku; 
+            cout << "Masukkan Tahun Buku\t \n";
+            cin >> dataBuku[a].tahunTerbit;
+            cout << "Masukkan Stok Buku\t \n";
+            cin >> dataBuku[a].stokBuku; 
+        }       
     }
 }
+
 //   
             
 //         case 2 : {
