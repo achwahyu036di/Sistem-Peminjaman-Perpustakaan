@@ -2,40 +2,30 @@
 #include <fstream>
 #include <stdlib.h>
 #include <conio.h>
+#include <vector>
 
 using namespace std;
 
 class Buku {
-private:
-    string judulBuku, pengarangBuku;
-    int tahunTerbit, stokBuku;
-    bool statusBuku;
-public:
-    Buku () {}
-    Buku (string judul[100], string pengarang[20], int tahun[4], int stok[3], bool status) {
-        judulBuku = judul;
-        pengarangBuku = pengarang;
-        tahunTerbit = tahun;
-        stokBuku = stok;
-        statusBuku = status;
-    }
-}
+    public:
+        string judulBuku; 
+        string pengarangBuku;
+        string idBuku;
+        int no;
+        int tahunTerbit; 
+        int stokBuku; 
+        bool statusBuku;
+};
 
 class Peminjam {
-private:
-    string namaPeminjam, alamatPeminjam, nomorTelponPeminjam;
-public:
-    Peminjam () {}
-    Peminjam (string nama, string alamat, string nomor) {
-        namaPeminjam = nama;
-        alamatPeminjam = alamat;
-        nomorTeleponPeminjam = nomor;
-    }
-}
+    public:
+        string namaPeminjam;
+        string asaldaerahPeminjam;
+        string nomorTeleponPeminjam;
+};
 
-Buku daftarBuku[100];
-
-int n;
+int n;        
+int banyakData; 
 
 int main () {
     cout << ":::::::::::::::: SELAMAT DATANG DI PERPUSTAKAAN PUTRA BANGSA ::::::::::::::::\n";
@@ -53,34 +43,37 @@ int main () {
     
     cout << "Silahkan tentukan pilihan Anda [1] - [7]\n";
     cin >> n ;
-
-    switch(n) {
-        case 1 : {
-            cout << "Menu Menambahkan Buku\n";
-            cout << "Judul Buku : ";
-            cin >> 
-            
-        }
-        case 2 : {
-
-        }
-        case 3 : {
-
-        }
-        case 4 : {
-
-        }
-        case 5 : {
-
-        }
-        case 6 : {
-
-        }
-        case 7 : {
-
-        }
-    }
-
     
-    return 0;
+    
+    if (n == 1) {
+        int namBuku;
+        cout << ":::::::: Menambahkan Buku Baru ::::::::\n";
+        cout << "---------------------------------------\n";
+        
+        cout << "Jumlah Buku Ditambahkan\t : ";
+        cin >> banyakData;
+        
+        vector <Buku> dataBuku (banyakData);
+        for (int a = 0; a < banyakData; ++a) {
+            cout << "Data Buku Ke-" << a + 1 << ":\n";
+            dataBuku[a].no = a + 1; 
+        
+            Buku buku;
+            cout << "Masukkan ID Buku\t : \n";
+            cin.ignore();
+            getline(cin, dataBuku[a].idBuku);
+            cout << "Masukkan Judul Buku Baru\t : \n";
+            cin.ignore();
+            getline(cin, dataBuku[a].judulBuku);
+            cout << "Masukkan Nama Pengarang Buku\t : \n";
+            cin >> dataBuku[a].pengarangBuku; 
+            cout << "Masukkan Tahun Buku\t \n";
+            cin >> dataBuku[a].tahunTerbit;
+            cout << "Masukkan Stok Buku\t \n";
+            cin >> dataBuku[a].stokBuku; 
+        }
+        
+    }
 }
+
+           
