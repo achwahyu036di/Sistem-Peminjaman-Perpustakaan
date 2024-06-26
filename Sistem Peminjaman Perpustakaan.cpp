@@ -64,15 +64,16 @@ int main () {
             getline(cin, dataBuku[a].idBuku);
             cout << "Masukkan Judul Buku Baru\t : \n";
             cin >> dataBuku[a].judulBuku;
+            cin.ignore();
+            getline(cin, dataBuku[a].judulBuku);
             cout << "Masukkan Nama Pengarang Buku\t : \n";
             cin >> dataBuku[a].pengarangBuku; 
             cout << "Masukkan Tahun Buku\t \n";
             cin >> dataBuku[a].tahunTerbit;
             cout << "Masukkan Stok Buku\t \n";
             cin >> dataBuku[a].stokBuku; 
+
         }
         
     }
 }
-
-           
