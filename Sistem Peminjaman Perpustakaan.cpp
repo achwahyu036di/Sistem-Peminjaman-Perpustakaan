@@ -59,18 +59,19 @@ int main () {
             dataBuku[a].no = a + 1; 
         
             Buku buku;
-            cout << "Masukkan ID Buku\t : \n";
+            cout << "Masukkan ID Buku\t : ";
             cin.ignore();
             getline(cin, dataBuku[a].idBuku);
-            cout << "Masukkan Judul Buku Baru\t : \n";
+            cout << "Masukkan Judul Buku Baru\t : ";
             cin >> dataBuku[a].judulBuku;
             cin.ignore();
             getline(cin, dataBuku[a].judulBuku);
-            cout << "Masukkan Nama Pengarang Buku\t : \n";
-            cin >> dataBuku[a].pengarangBuku; 
-            cout << "Masukkan Tahun Buku\t \n";
+            cout << "Masukkan Nama Pengarang Buku\t : ";
+            cin.ignore();
+            getline (cin, dataBuku[a].pengarangBuku); 
+            cout << "Masukkan Tahun Buku\t : ";
             cin >> dataBuku[a].tahunTerbit;
-            cout << "Masukkan Stok Buku\t \n";
+            cout << "Masukkan Stok Buku\t : ";
             cin >> dataBuku[a].stokBuku; 
 
         }
